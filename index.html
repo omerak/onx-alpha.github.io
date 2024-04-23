@@ -73,15 +73,46 @@
       </div>
 
       <div class="headline js-headline">
-        <p class="rotatingText">
-          <span class="rotatingText-adjective">specialized knowledge</span>
-          <span class="rotatingText-adjective">unique challenges </span>
-          <span class="rotatingText-adjective">business goals 🚀</span>
+        <p class="rotatingText js-rotatingText">
+          <span class="rotatingText-adjective">
+            <span
+              class="rotatingText-adjective-inner"
+              data-text="specialized knowledge"
+            >
+              specialized knowledge
+            </span>
+          </span>
+          <span class="rotatingText-adjective">
+            <span
+              class="rotatingText-adjective-inner"
+              data-text="unique challenges"
+            >unique challenges</span>
+          </span>
+          <span class="rotatingText-adjective">
+            <span
+              class="rotatingText-adjective-inner"
+              data-text="business goals"
+            >business goals</span>
+          </span>
         </p>
       </div>
       <a href="https://calendly.com/onxsoftware/30min" target="_blank" class="contact js-contact">
-        This is the Way 👉
+        This is the Way
       </a>
+      <div class="socials">
+        <a href="https://www.linkedin.com/company/onxsoftware" target="_blank" class="social-item">
+          Linkedin
+        </a>
+        <a href="https://twitter.com/onxsoftware" target="_blank" class="social-item">
+          Twitter
+        </a>
+        <a href="https://instagram.com/onxsoftware" target="_blank" class="social-item">
+          Instagram
+        </a>
+        <a href="mailto:info@onxsoftware.com" target="_blank" class="social-item">
+          Email
+        </a>
+      </div>
     </div>
   </div>
 </body>
@@ -117,11 +148,14 @@
     const $logo = document.querySelector('.js-logo-glitch');
     const $headline = document.querySelector('.js-headline');
     const $contact = document.querySelector('.js-contact');
-    var timeout;
+    const $rotatingText = document.querySelector('.js-rotatingText');
+    let timeout;
+
     document.addEventListener("mousemove", (event) => {
       $particles.classList.add('glitch');
       $headline.classList.add('active');
       $contact.classList.add('active');
+      $rotatingText.classList.add('glitch');
       if (timeout !== undefined) {
           window.clearTimeout(timeout);
           $logo.classList.add('visible');
@@ -131,9 +165,25 @@
         $logo.classList.remove('visible');
         $headline.classList.remove('active');
         $contact.classList.remove('active');
+        $rotatingText.classList.remove('glitch');
       }, 100);
     });
+    document.addEventListener("touchstart", (event) => {
+      $particles.classList.add('glitch');
+      $headline.classList.add('active');
+      $contact.classList.add('active');
+      $logo.classList.add('visible');
+      $rotatingText.classList.add('glitch');
+    });
+    document.addEventListener("touchend", (event) => {
+      $particles.classList.remove('glitch');
+      $logo.classList.remove('visible');
+      $headline.classList.remove('active');
+      $contact.classList.remove('active');
+      $rotatingText.classList.remove('glitch');
+    });
   }
+
   particles();
   mouseMovements();
 </script>

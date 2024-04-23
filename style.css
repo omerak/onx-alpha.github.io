@@ -1,6 +1,13 @@
 html, body {
   background-color: black;
-  font-family: sans-serif;
+  font-family: monospace, sans-serif;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  html, body {
+    font-size: 14px;
+  }
 }
 
 .content {
@@ -23,7 +30,6 @@ html, body {
   position: relative;
   margin-top: 40px;
   margin-bottom: 20px;
-  white-space: nowrap;
   font-size: 22px;
   font-weight: 200;
   color: #fff;
@@ -37,24 +43,30 @@ html, body {
 }
 
 .contact {
-  display: inline-block;
-  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  box-sizing: border-box;
+  padding: 0 40px;
   margin-top: 20px;
   font-size: 22px;
   border: 2px solid #ffff;
   color: #fff;
+  transition: .2s linear;
   text-decoration: none;
 }
 
 .contact.active {
   /* background-color: #fff; */
-  transition: .1s;
-  animation: hide-show 1s alternate infinite linear;
+  border: 5px solid #ffff;
+  /* animation: hide-show 1s alternate infinite linear; */
 }
 
 
 .logo-box {
   position: relative;
+  margin-top: auto;
   width: 271px;
   height: 94px;
   animation: 
@@ -89,7 +101,7 @@ html, body {
 .glitch-filter-example__filtered-text {
   filter: url(#filter);
   fill: white;
-  font-family: "Share Tech Mono", sans-serif;
+  /* font-family: "Share Tech Mono", sans-serif; */
   font-size: 100px;
   text-align: center;
   margin: 0;
@@ -563,17 +575,15 @@ rotatedtxt css
 */
 
 .rotatingText {
-  font-family: "Georgia", serif;
-  font-style: italic;
+  /* font-family: "Georgia", serif; */
   font-size: 18px;
   text-align: center;
 }
 
 .rotatingText-adjective {
-  font-family: "Open Sans", sans-serif;
+  font-family: monospace;
   font-size: 80px;
-  font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   left: 0;
   margin-bottom: 0;
   margin-top: 50px;
@@ -584,6 +594,13 @@ rotatedtxt css
   text-transform: uppercase;
   top: 0;
 }
+
+@media only screen and (max-width: 600px) {
+  .rotatingText-adjective {
+    font-size: 50px;
+  }
+}
+
 
 .rotatingText-adjective:nth-of-type(1) {
           animation-name: rotate;
@@ -662,4 +679,192 @@ rotatedtxt css
     opacity: 0;
     transform: translate3d(0, -25px, 0);
   }
+}
+
+.rotatingText-adjective-inner {
+
+}
+
+.rotatingText-adjective-inner {
+  display: block;
+  color: white;
+  position: relative;
+  margin: 0 auto;
+}
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(94px, 9999px, 7px, 0);
+  }
+  5% {
+    clip: rect(5px, 9999px, 16px, 0);
+  }
+  10% {
+    clip: rect(36px, 9999px, 93px, 0);
+  }
+  15% {
+    clip: rect(80px, 9999px, 93px, 0);
+  }
+  20% {
+    clip: rect(93px, 9999px, 52px, 0);
+  }
+  25% {
+    clip: rect(17px, 9999px, 2px, 0);
+  }
+  30% {
+    clip: rect(69px, 9999px, 89px, 0);
+  }
+  35% {
+    clip: rect(45px, 9999px, 35px, 0);
+  }
+  40% {
+    clip: rect(65px, 9999px, 88px, 0);
+  }
+  45% {
+    clip: rect(43px, 9999px, 38px, 0);
+  }
+  50% {
+    clip: rect(32px, 9999px, 40px, 0);
+  }
+  55% {
+    clip: rect(63px, 9999px, 74px, 0);
+  }
+  60% {
+    clip: rect(11px, 9999px, 40px, 0);
+  }
+  65% {
+    clip: rect(70px, 9999px, 95px, 0);
+  }
+  70% {
+    clip: rect(13px, 9999px, 71px, 0);
+  }
+  75% {
+    clip: rect(3px, 9999px, 12px, 0);
+  }
+  80% {
+    clip: rect(45px, 9999px, 50px, 0);
+  }
+  85% {
+    clip: rect(84px, 9999px, 5px, 0);
+  }
+  90% {
+    clip: rect(25px, 9999px, 91px, 0);
+  }
+  95% {
+    clip: rect(11px, 9999px, 41px, 0);
+  }
+  100% {
+    clip: rect(33px, 9999px, 29px, 0);
+  }
+}
+
+.rotatingText.glitch .rotatingText-adjective-inner:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  width: 100%;
+  text-align: center;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(15px, 9999px, 74px, 0);
+  }
+  5% {
+    clip: rect(13px, 9999px, 97px, 0);
+  }
+  10% {
+    clip: rect(47px, 9999px, 16px, 0);
+  }
+  15% {
+    clip: rect(20px, 9999px, 71px, 0);
+  }
+  20% {
+    clip: rect(96px, 9999px, 56px, 0);
+  }
+  25% {
+    clip: rect(42px, 9999px, 100px, 0);
+  }
+  30% {
+    clip: rect(76px, 9999px, 33px, 0);
+  }
+  35% {
+    clip: rect(54px, 9999px, 82px, 0);
+  }
+  40% {
+    clip: rect(17px, 9999px, 31px, 0);
+  }
+  45% {
+    clip: rect(42px, 9999px, 42px, 0);
+  }
+  50% {
+    clip: rect(56px, 9999px, 60px, 0);
+  }
+  55% {
+    clip: rect(93px, 9999px, 29px, 0);
+  }
+  60% {
+    clip: rect(74px, 9999px, 58px, 0);
+  }
+  65% {
+    clip: rect(9px, 9999px, 88px, 0);
+  }
+  70% {
+    clip: rect(43px, 9999px, 9px, 0);
+  }
+  75% {
+    clip: rect(49px, 9999px, 52px, 0);
+  }
+  80% {
+    clip: rect(59px, 9999px, 44px, 0);
+  }
+  85% {
+    clip: rect(55px, 9999px, 73px, 0);
+  }
+  90% {
+    clip: rect(98px, 9999px, 84px, 0);
+  }
+  95% {
+    clip: rect(34px, 9999px, 55px, 0);
+  }
+  100% {
+    clip: rect(100px, 9999px, 65px, 0);
+  }
+}
+
+.rotatingText.glitch .rotatingText-adjective-inner:before {
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+
+
+/* social */
+.socials {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: 20px;
+  color: #fff
+}
+
+.social-item {
+  margin: 10px;
+  color: inherit;
 }
