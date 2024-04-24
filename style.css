@@ -80,7 +80,12 @@ body {
 }
 
 .contact .arrow-svg {
-  margin-left: 10px;
+  margin-left: 15px;
+  transition: .2s linear;
+}
+
+.contact.active .arrow-svg {
+  scale: 1.4;
 }
 
 .logo-box {
