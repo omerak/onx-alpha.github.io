@@ -79,6 +79,9 @@ body {
   /* animation: hide-show 1s alternate infinite linear; */
 }
 
+.contact .arrow-svg {
+  margin-left: 10px;
+}
 
 .logo-box {
   position: relative;
