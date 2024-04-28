@@ -25,7 +25,7 @@
         </svg>
         <svg class="logo-glitch js-logo-glitch" width="740" height="248" viewBox="0 0 740 248" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path class="glitch-filter-example__filtered-text" fill-rule="evenodd" clip-rule="evenodd" d="M172.441 10.0295C127.337 -9.35207 73.0375 -0.64311 36.1969 36.1564C-12.0656 84.3649 -12.0656 162.643 36.1969 210.905C84.4593 259.168 162.683 259.168 210.946 210.905C257.154 164.697 259.121 91.0237 216.846 42.4774C214.968 40.3195 213.002 38.2113 210.948 36.1574C199.523 24.7322 186.422 16.0258 172.441 10.0295ZM124.632 43.3432C103.747 43.0709 82.7836 50.8964 66.8603 66.8198C35.549 98.185 35.549 148.985 66.8603 180.296C98.2255 211.607 149.025 211.607 180.336 180.296C196.249 164.356 204.075 143.396 203.814 122.525L124.632 43.3432ZM430.499 5.87196V148.824V148.932L274.807 5.87196H269.948V53.8105V60.8825V242.488H315.242V102.397V101.695L470.988 242.488H475.793V202.269V190.338V5.87196H430.499ZM554.99 5.87196H507.16L570.7 103.693L491.288 242.326H540.36L618.639 104.124L554.99 5.87196ZM724.128 242.326H676.298L612.596 144.127L690.928 5.87196H740L660.588 144.505L724.128 242.326Z" fill="white"/>
-          <defs>
+          <!-- <defs>
             <svg id="glitchmask-r" width="100%" height="100%" viewbox="0 0 100 100" preserveAspectRatio="none">
               <line class="top-r" x1="0" y1="0" x2="100%" y2="0"> </line>
               <line class="bot-r" x1="0" y1="100%" x2="100%" y2="100%"></line>
@@ -36,8 +36,6 @@
             </svg>
             <filter color-interpolation-filters="sRGB" id="filter" width="100%" heigth="100%" x="0" y="0">
               <feFlood flood-color="black" result="black" />
-
-              <!-- red text start -->
               <feFlood flood-color="red" result="REDTXT_FLOOD_10" />
               <feComposite operator="in" in="REDTXT_FLOOD_10" in2="SourceAlpha" result="REDTXT_COMP_20" />
               <feOffset in="SourceGraphic" dx="-2" dy="0" result="REDTXT_OFFSET_30" />
@@ -48,9 +46,7 @@
               </feMerge>
               <feImage preserveAspectRatio="none" id="mask-r" result="REDTXT_IMG_50" xlink:href="#glitchmask-r" />
               <feComposite in2="REDTXT_IMG_50" in="REDTXT_MERGE_40" operator="out" result="REDTXT_COMP_60" />
-              <!-- red text end -->
 
-              <!-- green text start -->
               <feFlood flood-color="limegreen" result="GREENTXT_FLOOD_10" />
               <feComposite operator="in" in="GREENTXT_FLOOD_10" in2="SourceAlpha" result="GREENTXT_COMP_20" />
               <feOffset in="SourceGraphic" dx="2" dy="0" result="GREENTXT_OFFSET_30" />
@@ -61,7 +57,6 @@
               </feMerge>
               <feImage preserveAspectRatio="none" id="mask-g" result="GREENTXT_IMG_50" xlink:href="#glitchmask-g" />
               <feComposite in2="GREENTXT_IMG_50" in="GREENTXT_MERGE_40" operator="out" result="GREENTXT_COMP_60" />
-              <!-- green text end -->
 
               <feMerge result="MERGE_10">
                   <feMergeNode in="SourceGraphic" />
@@ -69,7 +64,7 @@
                   <feMergeNode in="GREENTXT_COMP_60" />
               </feMerge>
             </filter>
-          </defs>
+          </defs> -->
         </svg>
         <!-- <svg class="logo-glitch js-logo-glitch" width="181" height="63" viewBox="0 0 181 63" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path class="glitch-filter-example__filtered-text" d="M172.261 8.5H180.085L163.579 34.23C163.477 34.3888 163.473 34.5913 163.569 34.7538L179.625 62H171.5H171.277L154.099 34.5152L172.261 8.5Z" fill="white" stroke="white" stroke-linejoin="round"/>
