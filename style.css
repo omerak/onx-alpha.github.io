@@ -50,12 +50,11 @@ body {
   font-weight: 200;
   color: #fff;
   text-align: center;
+  transition: .1s;
 }
 
 .headline.active {
   color: #fff;
-  transition: .1s;
-  animation: hide-show 2s alternate infinite linear;
 }
 
 .contact {
@@ -73,7 +72,8 @@ body {
   text-decoration: none;
 }
 
-.contact.active {
+.contact.active,
+.contact:hover {
   /* background-color: #fff; */
   border: 5px solid #ffff;
   /* animation: hide-show 1s alternate infinite linear; */
@@ -87,7 +87,8 @@ body {
   left: 0;
 }
 
-.contact.active .arrow-svg {
+.contact.active .arrow-svg, 
+.contact:hover .arrow-svg {
   left: 5px;
 }
 
@@ -100,7 +101,8 @@ body {
 }
 
 .logo-box:hover .logo-glitch {
-  opacity: 1
+  opacity: 1;
+  transform: scale(1.01);
 }
 
 .logo {
@@ -115,7 +117,7 @@ body {
   height: 94px;
   left: 0;
   top: 0;
-  opacity: 0;
+  /* opacity: 0; */
   transform: scale(1);
   transition: .1s;
 }
@@ -785,7 +787,8 @@ rotatedtxt css
   }
 }
 
-.rotatingText.glitch .rotatingText-adjective-inner:after {
+.rotatingText.glitch .rotatingText-adjective-inner:after,
+.rotatingText:hover .rotatingText-adjective-inner:after {
   content: attr(data-text);
   position: absolute;
   left: 2px;
@@ -866,7 +869,8 @@ rotatedtxt css
   }
 }
 
-.rotatingText.glitch .rotatingText-adjective-inner:before {
+.rotatingText.glitch .rotatingText-adjective-inner:before,
+.rotatingText:hover .rotatingText-adjective-inner:before {
   content: attr(data-text);
   position: absolute;
   width: 100%;
