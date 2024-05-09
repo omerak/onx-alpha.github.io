@@ -40,12 +40,19 @@ body {
   overflow: hidden;
 }
 
+.hidden-headline {
+  max-width: 750px;
+  font-size: 40px;
+  opacity: 0;
+  visibility: hidden;
+}
+
 .headline {
   width: 100%;
-  height: 250px;
+  max-width: 750px;
   position: relative;
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-size: 22px;
   font-weight: 200;
   color: #fff;
@@ -57,6 +64,16 @@ body {
   color: #fff;
 }
 
+.summary {
+  max-width: 700px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
+}
+
 .contact {
   display: flex;
   justify-content: center;
@@ -64,7 +81,6 @@ body {
   height: 70px;
   box-sizing: border-box;
   padding: 0 40px;
-  margin-top: 20px;
   font-size: 22px;
   border: 2px solid #ffff;
   color: #fff;
@@ -605,17 +621,17 @@ rotatedtxt css
 
 .rotatingText {
   /* font-family: "Georgia", serif; */
+  margin: 0;
   font-size: 18px;
   text-align: center;
 }
 
 .rotatingText-adjective {
   font-family: monospace;
-  font-size: 80px;
+  font-size: 40px;
   font-weight: 600;
   left: 0;
   margin-bottom: 0;
-  margin-top: 50px;
   opacity: 0;
   position: absolute;
   right: 0;
@@ -625,8 +641,43 @@ rotatedtxt css
 }
 
 @media only screen and (max-width: 600px) {
+  .particle {
+    width: 2px;
+    height: 2px;
+    box-shadow: 0 0 4px 4px rgba(255,255,255,1);
+  }
+
+  .logo,
+  .logo-glitch,
+  .logo-box {
+    width: 180px;
+    height: 62px;
+  }
+
   .rotatingText-adjective {
-    font-size: 50px;
+    font-size: 25px;
+  }
+
+  .headline {
+    /* margin-top: 20px; */
+    /* margin-bottom: 0; */
+  }
+
+  .hidden-headline {
+    font-size: 25px;
+  }
+
+  .summary {
+    /* margin-top: 10px; */
+    /* margin-bottom: 20px; */
+    font-size: 14px;
+    line-height: inherit;
+  }
+
+  .contact {
+    height: 50px;
+    /* margin-top: 0; */
+    font-size: 18px;
   }
 }
 
@@ -906,4 +957,27 @@ rotatedtxt css
   font-size: 12px;
   color: #fff;
   opacity: .5
+}
+
+.email-box {
+  display: inline-block;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  opacity: .5;
+  margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .hidden-on-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .hidden-up-mobile {
+    display: none;
+  }
 }
