@@ -58,6 +58,7 @@ body {
   color: #fff;
   text-align: center;
   transition: .1s;
+  user-select: none;
 }
 
 .headline.active {
@@ -65,6 +66,7 @@ body {
 }
 
 .summary {
+  position: relative;
   max-width: 700px;
   padding-right: 10px;
   padding-left: 10px;
@@ -72,6 +74,7 @@ body {
   font-size: 16px;
   line-height: 1.4;
   color: #fff;
+  user-select: none;
 }
 
 .contact {
@@ -641,48 +644,6 @@ rotatedtxt css
   top: 0;
 }
 
-@media only screen and (max-width: 600px) {
-  .particle {
-    width: 2px;
-    height: 2px;
-    box-shadow: 0 0 4px 4px rgba(255,255,255,1);
-  }
-
-  .logo,
-  .logo-glitch,
-  .logo-box {
-    width: 180px;
-    height: 62px;
-  }
-
-  .rotatingText-adjective {
-    font-size: 25px;
-  }
-
-  .headline {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
-  .hidden-headline {
-    font-size: 25px;
-  }
-
-  .summary {
-    /* margin-top: 10px; */
-    margin-bottom: 30px;
-    font-size: 14px;
-    line-height: inherit;
-  }
-
-  .contact {
-    height: 50px;
-    /* margin-top: 0; */
-    font-size: 18px;
-  }
-}
-
-
 .rotatingText-adjective:nth-of-type(1) {
           animation-name: rotate;
           animation-duration: 6.5s;
@@ -839,22 +800,6 @@ rotatedtxt css
   }
 }
 
-.rotatingText.glitch .rotatingText-adjective-inner:after,
-.rotatingText:hover .rotatingText-adjective-inner:after {
-  content: attr(data-text);
-  position: absolute;
-  left: 2px;
-  width: 100%;
-  text-align: center;
-  text-shadow: -1px 0 red;
-  top: 0;
-  color: white;
-  background: black;
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-  animation: noise-anim 2s infinite linear alternate-reverse;
-}
-
 @keyframes noise-anim-2 {
   0% {
     clip: rect(15px, 9999px, 74px, 0);
@@ -921,8 +866,54 @@ rotatedtxt css
   }
 }
 
+.rotatingText.glitch .rotatingText-adjective-inner:after,
+.rotatingText:hover .rotatingText-adjective-inner:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  width: 100%;
+  text-align: center;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
 .rotatingText.glitch .rotatingText-adjective-inner:before,
 .rotatingText:hover .rotatingText-adjective-inner:before {
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+.summary.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  width: 100%;
+  text-align: center;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+.summary.glitch:before {
   content: attr(data-text);
   position: absolute;
   width: 100%;
@@ -968,7 +959,7 @@ rotatedtxt css
   font-size: 12px;
   color: #fff;
   opacity: .5;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 
@@ -983,3 +974,54 @@ rotatedtxt css
     display: none;
   }
 }
+
+
+@media only screen and (max-width: 600px) {
+  .particle {
+    width: 2px;
+    height: 2px;
+    box-shadow: 0 0 4px 4px rgba(255,255,255,1);
+  }
+
+  .logo,
+  .logo-glitch,
+  .logo-box {
+    width: 180px;
+    height: 62px;
+  }
+
+  .rotatingText-adjective {
+    font-size: 25px;
+  }
+
+  .headline {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hidden-headline {
+    font-size: 25px;
+  }
+
+  .summary {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: inherit;
+  }
+
+  .socials {
+    margin-bottom: 0;
+  }
+
+  .social-item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .contact {
+    height: 50px;
+    /* margin-top: 0; */
+    font-size: 18px;
+  }
+}
+
