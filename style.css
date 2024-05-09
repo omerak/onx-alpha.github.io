@@ -78,6 +78,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   height: 70px;
   box-sizing: border-box;
   padding: 0 40px;
@@ -659,8 +660,8 @@ rotatedtxt css
   }
 
   .headline {
-    /* margin-top: 20px; */
-    /* margin-bottom: 0; */
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   .hidden-headline {
@@ -669,7 +670,7 @@ rotatedtxt css
 
   .summary {
     /* margin-top: 10px; */
-    /* margin-bottom: 20px; */
+    margin-bottom: 30px;
     font-size: 14px;
     line-height: inherit;
   }
@@ -961,6 +962,7 @@ rotatedtxt css
 
 .email-box {
   display: inline-block;
+  flex-shrink: 0;
   padding: 0 10px;
   text-align: center;
   font-size: 12px;
