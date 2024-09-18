@@ -20,23 +20,27 @@
 <body>
   <header class="header">
     <!-- <div class="particles"></div> -->
-    <div class="header-logo-box">
-      <svg class="header-logo" width="124" height="42" viewBox="0 0 740 248" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M172.441 10.0295C127.337 -9.35207 73.0375 -0.64311 36.1969 36.1564C-12.0656 84.3649 -12.0656 162.643 36.1969 210.905C84.4593 259.168 162.683 259.168 210.946 210.905C257.154 164.697 259.121 91.0237 216.846 42.4774C214.968 40.3195 213.002 38.2113 210.948 36.1574C199.523 24.7322 186.422 16.0258 172.441 10.0295ZM124.632 43.3432C103.747 43.0709 82.7836 50.8964 66.8603 66.8198C35.549 98.185 35.549 148.985 66.8603 180.296C98.2255 211.607 149.025 211.607 180.336 180.296C196.249 164.356 204.075 143.396 203.814 122.525L124.632 43.3432ZM430.499 5.87196V148.824V148.932L274.807 5.87196H269.948V53.8105V60.8825V242.488H315.242V102.397V101.695L470.988 242.488H475.793V202.269V190.338V5.87196H430.499ZM554.99 5.87196H507.16L570.7 103.693L491.288 242.326H540.36L618.639 104.124L554.99 5.87196ZM724.128 242.326H676.298L612.596 144.127L690.928 5.87196H740L660.588 144.505L724.128 242.326Z" fill="#CCC5B8"></path>
-      </svg>
+    <div class="content">
+      <div class="header-inner">
+        <div class="header-logo-box">
+          <svg class="header-logo" width="124" height="42" viewBox="0 0 740 248" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M172.441 10.0295C127.337 -9.35207 73.0375 -0.64311 36.1969 36.1564C-12.0656 84.3649 -12.0656 162.643 36.1969 210.905C84.4593 259.168 162.683 259.168 210.946 210.905C257.154 164.697 259.121 91.0237 216.846 42.4774C214.968 40.3195 213.002 38.2113 210.948 36.1574C199.523 24.7322 186.422 16.0258 172.441 10.0295ZM124.632 43.3432C103.747 43.0709 82.7836 50.8964 66.8603 66.8198C35.549 98.185 35.549 148.985 66.8603 180.296C98.2255 211.607 149.025 211.607 180.336 180.296C196.249 164.356 204.075 143.396 203.814 122.525L124.632 43.3432ZM430.499 5.87196V148.824V148.932L274.807 5.87196H269.948V53.8105V60.8825V242.488H315.242V102.397V101.695L470.988 242.488H475.793V202.269V190.338V5.87196H430.499ZM554.99 5.87196H507.16L570.7 103.693L491.288 242.326H540.36L618.639 104.124L554.99 5.87196ZM724.128 242.326H676.298L612.596 144.127L690.928 5.87196H740L660.588 144.505L724.128 242.326Z" fill="#CCC5B8"></path>
+          </svg>
+        </div>
+        <nav class="nav">
+          <a href="#about" class="nav-item">About</a>
+          <a href="#services" class="nav-item">Services</a>
+          <a href="#clients" class="nav-item">Clients</a>
+          <a href="#products" class="nav-item">Products</a>
+          <a href="#contact" class="nav-item">Contact</a>
+        </nav>
+      </div>
     </div>
-    <nav class="nav">
-      <a href="#about" class="nav-item">About</a>
-      <a href="#services" class="nav-item">Services</a>
-      <a href="#clients" class="nav-item">Clients</a>
-      <a href="#products" class="nav-item">Products</a>
-      <a href="#contact" class="nav-item">Contact</a>
-    </nav>
   </header>
+  <div class="particles js-particles"></div>
   <div class="container hero-container js-main-container">
-    <div class="particles js-particles"></div>
     <div class="content text-center">
-      <div class="logo-box">
+      <div class="logo-box js-logo-box">
         <!-- <svg class="logo" width="181" height="63" viewBox="0 0 181 63" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M172.261 8.5H180.085L163.579 34.23C163.477 34.3888 163.473 34.5913 163.569 34.7538L179.625 62H171.5H171.277L154.099 34.5152L172.261 8.5Z" fill="white" stroke="white" stroke-linejoin="round"/>
           <path d="M136.735 54H128.902L145.924 26.765C146.026 26.6011 146.025 26.3927 145.921 26.23L129.415 0.5H137.5H137.735L155.396 26.5001L136.735 54Z" fill="white" stroke="white" stroke-linejoin="round"/>
@@ -44,10 +48,10 @@
           <path d="M116.049 58L79.1543 20.7777L75.7376 17.3307L73.6056 15.1797L75.7315 15.7083L75.7376 17.3307L75.7505 20.7777L75.7695 25.847L75.8075 35.9857L75.8834 56.263H68.5184V0H68.8981L79.395 10.7428L89.892 21.4857L100.389 32.2285L105.637 37.5999L109.134 41.1788L110.886 42.9714L109.14 42.5938L109.134 41.1788L109.121 37.5999L109.088 28.6153L109.054 19.6307L108.988 1.66146H116.277V58H116.049Z" fill="white"/>
           <path d="M48.5175 29C48.5175 26.1302 47.986 23.4366 46.9231 20.9193C45.8601 18.3516 44.3921 16.1111 42.5193 14.1979C40.6464 12.2847 38.4698 10.7995 35.9895 9.74219C33.5092 8.63455 30.8518 8.08073 28.0172 8.08073C25.1319 8.08073 22.4492 8.63455 19.9689 9.74219L48.5174 29.0755L48.5175 29Z" fill="white"/>
         </svg> -->
-        <svg class="logo" width="740" height="248" viewBox="0 0 740 248" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="logo" width="740" height="100%" viewBox="0 0 740 248" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M172.441 10.0295C127.337 -9.35207 73.0375 -0.64311 36.1969 36.1564C-12.0656 84.3649 -12.0656 162.643 36.1969 210.905C84.4593 259.168 162.683 259.168 210.946 210.905C257.154 164.697 259.121 91.0237 216.846 42.4774C214.968 40.3195 213.002 38.2113 210.948 36.1574C199.523 24.7322 186.422 16.0258 172.441 10.0295ZM124.632 43.3432C103.747 43.0709 82.7836 50.8964 66.8603 66.8198C35.549 98.185 35.549 148.985 66.8603 180.296C98.2255 211.607 149.025 211.607 180.336 180.296C196.249 164.356 204.075 143.396 203.814 122.525L124.632 43.3432ZM430.499 5.87196V148.824V148.932L274.807 5.87196H269.948V53.8105V60.8825V242.488H315.242V102.397V101.695L470.988 242.488H475.793V202.269V190.338V5.87196H430.499ZM554.99 5.87196H507.16L570.7 103.693L491.288 242.326H540.36L618.639 104.124L554.99 5.87196ZM724.128 242.326H676.298L612.596 144.127L690.928 5.87196H740L660.588 144.505L724.128 242.326Z" fill="white"/>
         </svg>
-        <svg class="logo-glitch js-logo-glitch" width="740" height="248" viewBox="0 0 740 248" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="logo-glitch js-logo-glitch" width="740" height="100%" viewBox="0 0 740 248" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path class="glitch-filter-example__filtered-text" fill-rule="evenodd" clip-rule="evenodd" d="M172.441 10.0295C127.337 -9.35207 73.0375 -0.64311 36.1969 36.1564C-12.0656 84.3649 -12.0656 162.643 36.1969 210.905C84.4593 259.168 162.683 259.168 210.946 210.905C257.154 164.697 259.121 91.0237 216.846 42.4774C214.968 40.3195 213.002 38.2113 210.948 36.1574C199.523 24.7322 186.422 16.0258 172.441 10.0295ZM124.632 43.3432C103.747 43.0709 82.7836 50.8964 66.8603 66.8198C35.549 98.185 35.549 148.985 66.8603 180.296C98.2255 211.607 149.025 211.607 180.336 180.296C196.249 164.356 204.075 143.396 203.814 122.525L124.632 43.3432ZM430.499 5.87196V148.824V148.932L274.807 5.87196H269.948V53.8105V60.8825V242.488H315.242V102.397V101.695L470.988 242.488H475.793V202.269V190.338V5.87196H430.499ZM554.99 5.87196H507.16L570.7 103.693L491.288 242.326H540.36L618.639 104.124L554.99 5.87196ZM724.128 242.326H676.298L612.596 144.127L690.928 5.87196H740L660.588 144.505L724.128 242.326Z" fill="white"/>
           <!-- <defs>
             <svg id="glitchmask-r" width="100%" height="100%" viewbox="0 0 100 100" preserveAspectRatio="none">
@@ -145,7 +149,7 @@
           </g>
         </svg>
       </a>
-      <div class="arrow-down" style="color: white; cursor: pointer;">
+      <div class="arrow-down">
         &darr;
       </div>
     </div>
@@ -339,8 +343,23 @@
       </div>
     </div>
   </section>
-  <section id="contact">
+  <section class="container" id="contact">
     <div class="content">
+      <h2 class="text-center" style="margin-top: auto;">Let's Take the First Step to Shape the Future of Your Business</h2>
+      <p class="text-center">We're here to help you turn your ideas into reality. Whether you're an investor, an aspiring entrepreneur, or a seasoned team looking to optimize your operations, we're here to turn your ideas into reality.</p>
+      <a href="https://calendly.com/onxsoftware/30min" target="_blank" class="contact js-contact">
+        Let's Meet
+        <svg class="arrow-svg" width="26px" height="16px" viewBox="0 0 26 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <g id="arraw-svg" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="arraw-svg-2" transform="translate(-1212.000000, -246.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                  <g id="arrow" transform="translate(1212.000000, 245.000000)">
+                      <path d="M16.7491667,1.30868359 L16.7491667,1.30868359 C16.3375886,1.71718912 16.3350977,2.38199828 16.7436033,2.79357639 C16.7454508,2.7954378 16.7473053,2.79729227 16.7491667,2.79913978 L21.9341667,7.94543194 L21.9341667,10.0545681 L16.7491667,15.2008602 C16.3375886,15.6093658 16.3350977,16.2741749 16.7436033,16.685753 C16.7454508,16.6876144 16.7473053,16.6894689 16.7491667,16.6913164 L16.7491667,16.6913164 C17.1647475,17.1037947 17.8352525,17.1037947 18.2508333,16.6913164 L26,9 L18.2508333,1.30868359 C17.8352525,0.896205256 17.1647475,0.896205256 16.7491667,1.30868359 Z" id="proceed-arrow"></path>
+                      <path d="M23,10.1091361 L1.05456806,10.1091361 C0.472146205,10.1091361 0,9.63698992 0,9.05456806 C0,8.4721462 0.472146205,8 1.05456806,8 L23,8 L23,10.1091361 Z" id="proceed-line"></path>
+                  </g>
+              </g>
+          </g>
+        </svg>
+      </a>
       <div class="socials">
         <a href="https://www.linkedin.com/company/onxsoftware" target="_blank" class="social-item">
           LinkedIn
@@ -388,7 +407,7 @@
     }
     const $headerParticles = $particles.cloneNode(true);
     $headerParticles.classList.remove('js-particles');
-    document.querySelector('.header').prepend($headerParticles);
+    // document.querySelector('.header').prepend($headerParticles);
   }
   
   function mouseMovements() {
@@ -442,17 +461,23 @@
     window.addEventListener('scroll', () => {
       const containerHeight = window.innerHeight - window.scrollY;
       if (containerHeight > 0) {
+        $mainContainer.style.paddingTop = `${window.scrollY}px`;
         $mainContainer.style.height = `${window.innerHeight - window.scrollY}px`;
       }
       // if (window.scrollY > window.innerHeight - $header.clientHeight) {
-      // if (window.scrollY > 100) {
-      if (window.scrollY > $mainContainer.clientHeight - $header.clientHeight) {
+      const $logoBox = document.querySelector('.js-logo-box');
+      const logoOffsetTop = $logoBox.offsetTop;
+      // if (window.scrollY > $mainContainer.clientHeight - $header.clientHeight) {
+        console.log(logoOffsetTop);
+      if (logoOffsetTop < 30) {
         if (!$header.classList.contains('scrolled')) {
           $header.classList.add('scrolled');
+          $logoBox.classList.add('scrolled');
         }
       } else {
         if ($header.classList.contains('scrolled')) {
           $header.classList.remove('scrolled');
+          $logoBox.classList.remove('scrolled');
         }
       }
     });
