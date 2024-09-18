@@ -18,14 +18,22 @@
   <link href="./EudoxusSans/stylesheet.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="nav">
-    <a href="#about" class="nav-item">About</a>
-    <a href="#services" class="nav-item">Services</a>
-    <a href="#clients" class="nav-item">Clients</a>
-    <a href="#products" class="nav-item">Products</a>
-    <a href="#contact" class="nav-item">Contact</a>
-  </nav>
-  <div class="container">
+  <header class="header">
+    <!-- <div class="particles"></div> -->
+    <div class="header-logo-box">
+      <svg class="header-logo" width="124" height="42" viewBox="0 0 740 248" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M172.441 10.0295C127.337 -9.35207 73.0375 -0.64311 36.1969 36.1564C-12.0656 84.3649 -12.0656 162.643 36.1969 210.905C84.4593 259.168 162.683 259.168 210.946 210.905C257.154 164.697 259.121 91.0237 216.846 42.4774C214.968 40.3195 213.002 38.2113 210.948 36.1574C199.523 24.7322 186.422 16.0258 172.441 10.0295ZM124.632 43.3432C103.747 43.0709 82.7836 50.8964 66.8603 66.8198C35.549 98.185 35.549 148.985 66.8603 180.296C98.2255 211.607 149.025 211.607 180.336 180.296C196.249 164.356 204.075 143.396 203.814 122.525L124.632 43.3432ZM430.499 5.87196V148.824V148.932L274.807 5.87196H269.948V53.8105V60.8825V242.488H315.242V102.397V101.695L470.988 242.488H475.793V202.269V190.338V5.87196H430.499ZM554.99 5.87196H507.16L570.7 103.693L491.288 242.326H540.36L618.639 104.124L554.99 5.87196ZM724.128 242.326H676.298L612.596 144.127L690.928 5.87196H740L660.588 144.505L724.128 242.326Z" fill="#CCC5B8"></path>
+      </svg>
+    </div>
+    <nav class="nav">
+      <a href="#about" class="nav-item">About</a>
+      <a href="#services" class="nav-item">Services</a>
+      <a href="#clients" class="nav-item">Clients</a>
+      <a href="#products" class="nav-item">Products</a>
+      <a href="#contact" class="nav-item">Contact</a>
+    </nav>
+  </header>
+  <div class="container hero-container js-main-container">
     <div class="particles js-particles"></div>
     <div class="content text-center">
       <div class="logo-box">
@@ -118,12 +126,12 @@
           Maximizing Product Efficiency: Optimizing for Performance
         </div>
       </div>
-      <div
+      <!-- <div
         class="summary js-summary"
         data-text="We empower your business with software, design, web, and mobile application solutions. We manage the entire project lifecycle, from the inception of an idea to its execution. We view our role not just as a service provider, but as a committed partner, helping you anticipate and prepare for future challenges."
       >
         We empower your business with software, design, web, and mobile application solutions. We manage the entire project lifecycle, from the inception of an idea to its execution. We view our role not just as a service provider, but as a committed partner, helping you anticipate and prepare for future challenges.
-      </div>
+      </div> -->
       <a href="https://calendly.com/onxsoftware/30min" target="_blank" class="contact js-contact">
         Let's Meet
         <svg class="arrow-svg" width="26px" height="16px" viewBox="0 0 26 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -378,6 +386,9 @@
       $div.style.left = `${left}%`
       $particles.append($div);
     }
+    const $headerParticles = $particles.cloneNode(true);
+    $headerParticles.classList.remove('js-particles');
+    document.querySelector('.header').prepend($headerParticles);
   }
   
   function mouseMovements() {
@@ -385,7 +396,7 @@
     const $logo = document.querySelector('.js-logo-glitch');
     const $headline = document.querySelector('.js-headline');
     const $contact = document.querySelector('.js-contact');
-    const $summary = document.querySelector('.js-summary');
+    // const $summary = document.querySelector('.js-summary');
     const $rotatingText = document.querySelector('.js-rotatingText');
     let timeout;
 
@@ -394,7 +405,7 @@
       $headline.classList.add('active');
       $contact.classList.add('active');
       $rotatingText.classList.add('glitch');
-      $summary.classList.add('glitch');
+      // $summary.classList.add('glitch');
       if (timeout !== undefined) {
           window.clearTimeout(timeout);
           $logo.classList.add('visible');
@@ -405,7 +416,7 @@
         $headline.classList.remove('active');
         $contact.classList.remove('active');
         $rotatingText.classList.remove('glitch');
-        $summary.classList.remove('glitch');
+        // $summary.classList.remove('glitch');
       }, 100);
     });
     document.addEventListener("touchstart", (event) => {
@@ -414,7 +425,7 @@
       $contact.classList.add('active');
       $logo.classList.add('visible');
       $rotatingText.classList.add('glitch');
-      $summary.classList.add('glitch');
+      // $summary.classList.add('glitch');
     });
     document.addEventListener("touchend", (event) => {
       $particles.classList.remove('glitch');
@@ -422,10 +433,32 @@
       $headline.classList.remove('active');
       $contact.classList.remove('active');
       $rotatingText.classList.remove('glitch');
-      $summary.classList.remove('glitch');
+      // $summary.classList.remove('glitch');
+    });
+  }
+  function scroll() {
+    const $mainContainer = document.querySelector('.js-main-container');
+    const $header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      const containerHeight = window.innerHeight - window.scrollY;
+      if (containerHeight > 0) {
+        $mainContainer.style.height = `${window.innerHeight - window.scrollY}px`;
+      }
+      // if (window.scrollY > window.innerHeight - $header.clientHeight) {
+      // if (window.scrollY > 100) {
+      if (window.scrollY > $mainContainer.clientHeight - $header.clientHeight) {
+        if (!$header.classList.contains('scrolled')) {
+          $header.classList.add('scrolled');
+        }
+      } else {
+        if ($header.classList.contains('scrolled')) {
+          $header.classList.remove('scrolled');
+        }
+      }
     });
   }
 
+  scroll();
   particles();
   mouseMovements();
 </script>
