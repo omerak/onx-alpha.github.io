@@ -417,7 +417,7 @@
       if (containerHeight > 0) {
         // $mainContainer.style.paddingTop = `${window.scrollY}px`;
         // $contact.style.top = `${window.scrollY}px`;
-        $mainContainer.style.height = `${window.innerHeight - window.scrollY}px`;
+        $mainContainer.style.height = `${containerHeight}px`;
         $heroContent.style.transform = `translateY(${window.scrollY}px)`;
       }
       // if (window.scrollY > window.innerHeight - $header.clientHeight) {
@@ -427,7 +427,7 @@
           $header.classList.remove('scrolled');
           // $logoBox.classList.remove('scrolled');
         }
-      } else if (heroOffsetTop < 100) {
+      } else if (window.scrollY > window.innerHeight * .33) {
         if (!$header.classList.contains('scrolled')) {
           $header.classList.add('scrolled');
           $logoBox.classList.add('scrolled');
