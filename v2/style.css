@@ -48,6 +48,17 @@ body {
   min-height: initial;
   height: 100%;
   box-sizing: content-box;
+  transition: height .1s;
+  will-change: height;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform .1s;
+  will-change: transform;
 }
 
 .header {
@@ -59,12 +70,11 @@ body {
   color: #CCC5B8;
   box-shadow: 0 4px 4px rgba(0, 0, 0, .05);
   /* transition: .2s; */
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 
 .header.scrolled {
   background-color: #000;
-  mix-blend-mode: initial;
   /* color: #000; */
   /* transition: .2s; */
 }
@@ -121,6 +131,7 @@ body {
     padding: 0;
   }
   .nav-item {
+    padding: 5px;
     /* padding: 0!important;
     text-align: right; */
   }
@@ -536,6 +547,7 @@ body {
 
 .particle-box {
   position: absolute;
+  will-change: transform;
 }
 
 .particle-box.particle-anim-first {
@@ -582,35 +594,22 @@ body {
 
 }
 
-.particles.glitch .particle:before, .particles.glitch .particle:after,
-.particles.glitch .particle-electric:after,
-.particles.glitch .particle-electric:before {
-  opacity: 1;
-  /* width: 250%;
-  height: 250%;
-  left: -67%;
-  top: -67%; */
+@media (min-width: 768px) {
+  .particles.glitch .particle:before, .particles.glitch .particle:after,
+  .particles.glitch .particle-electric:after,
+  .particles.glitch .particle-electric:before {
+    opacity: 1;
+    /* width: 250%;
+    height: 250%;
+    left: -67%;
+    top: -67%; */
+  }
+
+  .particles.glitch .particle {
+    animation: skew-x-shaking-particle 0.2s linear infinite;
+  }
 }
 
-.particles.glitch .particle {
-  animation: skew-x-shaking-particle 0.2s linear infinite;
-}
-
-.particles.glitch .particle:before {
-  /* animation: skew-x-shaking 0.015s linear infinite; */
-}
-
-.particles.glitch .particle:after {
-  /* animation: skew-y-shaking 0.05s linear infinite; */
-}
-
-.particles.glitch .particle-electric:before {
-  /* animation: skew-x-shaking-2 0.023s linear infinite; */
-}
-
-.particles.glitch .particle-electric:after {
-  /* animation: skew-y-shaking-2 0.04s linear infinite; */
-}
 
 
 @keyframes animationFramesOne{
