@@ -47,6 +47,7 @@ body {
 .hero-container {
   min-height: initial;
   height: 100%;
+  box-sizing: content-box;
 }
 
 .header {
@@ -227,13 +228,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   /* flex-shrink: 0; */
   height: 70px;
   padding: 0 40px;
   font-size: 22px;
   border: 2px solid #CCC5B8;
   color: inherit;
-  transition: .2s linear;
+  transition: border .2s linear;
   text-decoration: none;
 }
 

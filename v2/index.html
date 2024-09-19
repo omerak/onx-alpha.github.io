@@ -464,19 +464,19 @@
   function scroll() {
     const $mainContainer = document.querySelector('.js-main-container');
     const $header = document.querySelector('.header');
+    // const $contact = document.querySelector('.js-contact');
     window.addEventListener('scroll', () => {
       const containerHeight = window.innerHeight - window.scrollY;
       if (containerHeight > 0) {
         $mainContainer.style.paddingTop = `${window.scrollY}px`;
+        // $contact.style.top = `${window.scrollY}px`;
         $mainContainer.style.height = `${window.innerHeight - window.scrollY}px`;
       }
       // if (window.scrollY > window.innerHeight - $header.clientHeight) {
       const $logoBox = document.querySelector('.js-logo-box');
       const logoOffsetTop = $logoBox.offsetTop;
       // if (window.scrollY > $mainContainer.clientHeight - $header.clientHeight) {
-      console.log(window.scrollY + window.innerHeight, document.documentElement.scrollHeight)
       if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
-        console.log('here')
         if ($header.classList.contains('scrolled')) {
           $header.classList.remove('scrolled');
           // $logoBox.classList.remove('scrolled');
