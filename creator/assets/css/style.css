@@ -867,6 +867,7 @@ img{
   
 .bwavehape svg{
 	width: 1320px;
+	max-width: 100%;
 }
 
 /*-------------------------------
@@ -2149,6 +2150,7 @@ svg#play_icon:hover #triangle {
 	color: #fff;
 	padding-top: 80px;
 	position: relative;
+	overflow: hidden;
 }
 .footer a{
 	color: #fff;
