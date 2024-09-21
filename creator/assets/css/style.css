@@ -882,7 +882,6 @@ img{
 	position: relative;
 	transition: .5s;
 	border-radius: 8px ;
-	margin-bottom: 30px;
 	height: 100%;
 }
 .feature-item:hover{
@@ -1824,6 +1823,7 @@ svg#play_icon:hover #triangle {
 
 .review-slider .owl-dots{
 	text-align: center;
+	margin-top: 20px;
 }
 .review-slider .owl-dots .owl-dot {
 	width: 17px;
