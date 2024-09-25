@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  scroll-margin-top: 80px;
 }
 
 html {
@@ -35,6 +36,9 @@ h1, h2 {
 .text-3 {
   font-size: 16px;
 }
+.h-100 {
+  min-height: 100lvh;
+}
 /*  */
 
 .text-center {
@@ -46,7 +50,6 @@ h1, h2 {
   flex-direction: column;
   position: relative;
   width: 100%;
-  min-height: 100lvh;
   color: #CCC5B8;
 }
 
@@ -67,7 +70,7 @@ h1, h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform .1s;
+  /* transition: transform .01s; */
   will-change: transform;
 }
 

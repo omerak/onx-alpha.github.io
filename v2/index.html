@@ -48,7 +48,7 @@
     </div>
   </header>
   <div class="particles js-particles"></div>
-  <div class="container hero-container js-main-container">
+  <div class="container h-100 hero-container js-main-container">
     <div class="content text-center">
       <div class="hero-content js-hero-content">
         <div class="logo-box js-logo-box">
@@ -198,7 +198,7 @@
       </div>
     </div>
   </section>
-  <section id="services" class="container">
+  <section id="services" class="container h-100">
     <div class="content">
       <h1 class="text-center">Services</h1>
       <div class="service-cards">
@@ -283,7 +283,7 @@
       </div>
     </div>
   </section>
-  <section class="container" id="contact">
+  <section class="container h-100" id="contact">
     <div class="content">
       <h2 class="text-center contact-title">Let's Take the First Step to Shape the Future of Your Business</h2>
       <p class="text-center contact-description">We're here to help you turn your ideas into reality. Whether you're an investor, an aspiring entrepreneur, or a seasoned team looking to optimize your operations, we're here to turn your ideas into reality.</p>
@@ -415,24 +415,22 @@
     const $header = document.querySelector('.header');
     const $logoBox = document.querySelector('.js-logo-box');
     const $heroContent = document.querySelector('.js-hero-content');
-    // const $contact = document.querySelector('.js-contact');
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', (e) => {
+      e.preventDefault();
       const containerHeight = window.innerHeight - window.scrollY;
+      const diff = $mainContainer.clientHeight;
       const heroOffsetTop = $heroContent.offsetTop;
-      if (containerHeight > 0) {
-        // $mainContainer.style.paddingTop = `${window.scrollY}px`;
-        // $contact.style.top = `${window.scrollY}px`;
-        $mainContainer.style.height = `${containerHeight}px`;
-        $heroContent.style.transform = `translateY(${window.scrollY}px)`;
+      window.scrollY <= $mainContainer.clientHeight;
+      if (window.scrollY <= window.innerHeight) {
+        $heroContent.style.transform = `translateY(${window.scrollY * .70}px)`;
       }
-      // if (window.scrollY > window.innerHeight - $header.clientHeight) {
-      // if (window.scrollY > $mainContainer.clientHeight - $header.clientHeight) {
-      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
-        if ($header.classList.contains('scrolled')) {
-          $header.classList.remove('scrolled');
-          // $logoBox.classList.remove('scrolled');
-        }
-      } else if (window.scrollY > window.innerHeight * .45) {
+      // if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+      //   if ($header.classList.contains('scrolled')) {
+      //     $header.classList.remove('scrolled');
+      //     $logoBox.classList.remove('scrolled');
+      //   }
+      // }
+      if (window.scrollY > window.innerHeight - $header.clientHeight) {
         if (!$header.classList.contains('scrolled')) {
           $header.classList.add('scrolled');
           $logoBox.classList.add('scrolled');
