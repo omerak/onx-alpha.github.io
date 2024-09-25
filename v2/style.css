@@ -9,6 +9,10 @@
   }
 }
 
+#contact {
+  scroll-margin-top: 0;
+}
+
 html {
   scroll-behavior: smooth;
   background-color: black;
