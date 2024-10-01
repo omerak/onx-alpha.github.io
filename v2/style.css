@@ -45,6 +45,8 @@ h1, h2 {
 /*  */
 .text-3 {
   font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 0;
 }
 .h-100 {
   min-height: 100lvh;
@@ -1284,45 +1286,40 @@ rotatedtxt css
 .partners-grid {
   width: 100%;
   display: grid;
+  margin-top: 36px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
   justify-items: center;
-  padding: 20px;
-  margin: 0 auto;
 }
 
 .partner-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   background-color: #f8f8f8;
-  padding: 40px 20px;
+  padding: 35px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.partner-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.partner-logo-box {
+  height: 58px;
+  margin-bottom: 20px;
 }
 
 .partner-logo {
-  height: 40px;
   object-fit: contain;
-  margin-top: auto;
-  margin-bottom: 15px;
 }
 
-.partner-item h3 {
+.partner-item h5 {
   color: #333;
   font-size: 18px;
-  margin-bottom: 10px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .partner-item p {
-  color: #666;
   font-size: 14px;
-  margin: 5px 0;
+  margin-top: 0;
 }
 
 @media (max-width: 768px) {
@@ -1430,7 +1427,7 @@ rotatedtxt css
 .features-image svg {
   position: absolute;
   left: 0;
-  max-width: 50vw;
+  width: 50vw;
 }
 
 .features-content {
@@ -1455,17 +1452,44 @@ rotatedtxt css
   margin-bottom: 0;
 }
 
+@media (max-width: 768px) {
+  .features-box {
+    position: relative;
+    margin-top: 40px;
+    z-index: 1;
+  }
+
+  .features-image {
+    width: auto;
+  }
+
+
+  .features-image svg {
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    left: -20px;
+    opacity: .25;
+    z-index: -1;
+  }
+  
+  .features-content {
+    width: 100%;
+  }
+}
+
 /*products*/
 .product-showcase {
-  display: flex;
-  justify-content: center;
+  
+  display: grid;
+  margin-top: 36px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
-  margin-top: 20px;
 }
 
 .product-card {
+  position: relative;
   display: flex;
-  width: 400px;
   flex-direction: column;
   background: rgba(217, 217, 217, 0.20);
   padding: 30px;
@@ -1487,6 +1511,13 @@ rotatedtxt css
   margin-bottom: 20px;
 }
 
+.product-card svg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
 .product-link {
   margin-top: auto;
   font-size: 16px;
@@ -1502,9 +1533,12 @@ rotatedtxt css
 }
 
 @media (max-width: 768px) {
+  .product-showcase {
+    
+  }
+
   .product-card {
     width: 100%;
-    max-width: 300px;
   }
 }
 
@@ -1512,7 +1546,7 @@ rotatedtxt css
 .contact-title {
   margin-top: auto;
   font-size: 72px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .contact-description {
@@ -1580,6 +1614,7 @@ rotatedtxt css
 .social-item {
   margin-left: 15px;
   color: inherit;
+  font-size: 16px;
   text-decoration: none;
 }
 
