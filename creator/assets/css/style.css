@@ -1289,11 +1289,17 @@ img{
 
 .course-category .col-xl-3:nth-child(8) .icon svg path{
 	fill: #39C0FA;
+	stroke: #39C0FA;
 }
 
 .course-category .col-xl-3:nth-child(8) .single-category:hover .icon{
 	background: #39C0FA;
 }
+
+.course-category .col-xl-3:nth-child(8) .single-category:hover .icon path {
+	stroke: #fff;
+}
+
 
 .course-category .col-xl-3:nth-child(9) .icon{
 	background: #F8941F12;
